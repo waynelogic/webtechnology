@@ -2,9 +2,18 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
+from .forms import UserForm
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    if request.method=="POST":
+        name = request.POST.get('name')
+        age = request.POST.get('age')
+        output = "<h2>Пользователь</h2><h3>Имя - {0}, Возраст - {1}</h3>".format(name,age)
+        return HttpResponse(output)
+    else:
+        userform=UserForm()
+        return render(request, "index.html", {"form" : userform})
+    # return HttpResponse("Hello, world. You're at the polls index.")
 
 def about(request):
     return HttpResponse("<h2>О сайте</h2>")
