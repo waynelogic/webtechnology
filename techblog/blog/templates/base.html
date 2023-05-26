@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% include 'partials/common/meta.html' %}
+    <title>>{% block title %}{% endblock %}&ndash; Blog</title>
+    {% load static %}
+    <link href="{% static 'blog/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'partials/common/header.html' %}
+    <div class="container main-content">
+        {% block content %}
+        {% endblock %}
+    </div><!-- /.container -->
+    {% include 'partials/common/scripts.html' %}
+</body>
+</html>

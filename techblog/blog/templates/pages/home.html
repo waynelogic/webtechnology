@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block content %}
+<h1>Статьи</h1>
+{% for obArticle in articles %}
+    <h4>
+        <a href="{% url 'article' obArticle.id %}">{{ obArticle.title }}</a>
+    </h4>
+    <pre>{{ obArticle.get_short_text }}</pre>
+{% endfor %}
+
+
+
+<!-- <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+at eos et impedit iure? Culpa distinctio ducimus laudantium, natus
+necessitatibus quaerat quibusdam quisquam? Aliquam autem cupiditate et
+nesciunt, perspiciatis repellat sit vitae. Fugiat laudantium minima
+nostrum officia, rerum ut. A animi aspernatur atque beatae commodi
+corporis deleniti dicta distinctio ea error eum expedita, facere illo
+inventore laborum mollitia necessitatibus nobis non officiis optio
+praesentium quaerat quas quisquam similique sint soluta veniam vitae? At
+distinctio doloribus, ea eos error, ex excepturi hic incidunt labore
+laboriosam libero maiores maxime molestiae non nulla officia placeat quos
+rem repellat reprehenderit, rerum soluta tempora
+velit?</span><span>Aliquam aliquid blanditiis culpa cum doloribus, impedit
+ipsam iusto perferendis quam vel! Aliquam atque consequuntur corporis
+cupiditate esse, et, impedit iusto laborum molestiae quaerat quas quidem
+quos repellendus rerum sapiente similique, sint suscipit ullam veniam
+voluptatum. Adipisci alias commodi, consectetur cupiditate, dicta et ipsum
+labore nemo perspiciatis qui, quis tempora unde. Ab accusamus alias,
+aspernatur corporis debitis, dolorum eligendi esse facilis ipsum itaque
+laudantium libero maxime minus obcaecati odit placeat, quis recusandae
+reiciendis tempora veritatis. Accusamus, alias amet aut delectus deleniti
+dolorem dolores fugiat harum hic iste minus perferendis provident
+quibusdam quidem quo rem repellat sapiente sequi velit voluptas?
+Minima?</span>
+</p> -->
+{% endblock %}
