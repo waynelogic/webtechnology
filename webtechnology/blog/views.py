@@ -15,6 +15,10 @@ def index(request):
         return render(request, "index.html", {"form" : userform})
     # return HttpResponse("Hello, world. You're at the polls index.")
 
+
+def blog(request):
+    return render(request, "blog.html")
+
 def about(request):
     return HttpResponse("<h2>О сайте</h2>")
 

@@ -23,6 +23,7 @@ from blog import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    re_path(r"^blog", views.blog, name="blog"),
 
     re_path(r"^about", views.about, name="about"),
     re_path(r'^contact', views.contact, name="contact"),

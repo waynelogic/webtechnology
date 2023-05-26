@@ -39,10 +39,11 @@
                         </div>
         
                         <div class="col-12">
-                            <label for="username" class="form-label">Username</label>
+                            <label for="username" class="form-label">E-mail</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                                {{ form.email }}
+                                {% comment %} <input type="text" class="form-control" id="username" placeholder="Username" required=""> {% endcomment %}
                                 <div class="invalid-feedback">
                                     Your username is required.
                                 </div>
